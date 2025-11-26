@@ -3,13 +3,13 @@ import java.util.Objects;
 public class Worker {
     private String name;
     private String surname;
-    private int age;
+    private double hourPrice;
 
-    public Worker(String name, String surname, int age) {
+    public Worker(String name, String surname, double hourPrice) {
         this.name = Objects.requireNonNull(name);
         this.surname = Objects.requireNonNull(surname);
-        if (age < 0) throw new IllegalArgumentException("Age cannot be negative");
-        this.age = age;
+        if (hourPrice < 0) throw new IllegalArgumentException("Age cannot be negative");
+        this.hourPrice = hourPrice;
     }
 
     public String getName() {
@@ -20,8 +20,12 @@ public class Worker {
         return surname;
     }
 
-    public int getAge() {
-        return age;
+    public double getHourPrice() {
+        return hourPrice;
+    }
+
+    public void setHourPrice(double hourPrice) {
+        this.hourPrice = hourPrice;
     }
 
     public void setName(String name) {
@@ -32,19 +36,17 @@ public class Worker {
         this.surname = surname;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+
 
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Worker worker)) return false;
-        return age == worker.age && Objects.equals(name, worker.name) && Objects.equals(surname, worker.surname);
+        return hourPrice == worker.hourPrice && Objects.equals(name, worker.name) && Objects.equals(surname, worker.surname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, age);
+        return Objects.hash(name, surname, hourPrice);
     }
 
     @Override
@@ -52,7 +54,7 @@ public class Worker {
         return "Worker{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", age=" + age +
+                ", hourPrice=" + hourPrice +
                 '}';
     }
 }
