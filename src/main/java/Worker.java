@@ -36,6 +36,9 @@ public class Worker {
         this.surname = surname;
     }
 
+    public double calculateSalary(int hoursWorked) {
+        return hourPrice * hoursWorked;
+    }
 
 
     @Override
