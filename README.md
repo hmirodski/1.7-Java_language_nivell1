@@ -8,13 +8,17 @@ Este proyecto contiene la implementación de dos ejercicios del Sprint 1.07 - An
 
 Jerarquía de clases con `Worker` como clase padre y dos clases hijas:
 
-- **Worker**: Clase base con atributos name, surname y hourPrice. Método `calculateSalary()` que multiplica horas por precio/hora.
-- **OnSiteWorker**: Trabajador presencial. Sobreescribe `calculateSalary()` sumando el atributo estático `petrol` al salario base.
-- **OnLineWorker**: Trabajador online. Sobreescribe `calculateSalary()` sumando la constante `INTERNET_FEE` al salario base.
+- **Worker**: Clase base con atributos name, surname y hourPrice. Método `calculateSalary()` que multiplica horas por
+  precio/hora.
+- **OnSiteWorker**: Trabajador presencial. Sobreescribe `calculateSalary()` sumando el atributo estático `petrol` al
+  salario base.
+- **OnLineWorker**: Trabajador online. Sobreescribe `calculateSalary()` sumando la constante `INTERNET_FEE` al salario
+  base.
 
 ### Ejercicio 2: @Deprecated y @SuppressWarnings
 
-Las clases hijas contienen métodos obsoletos marcados con `@Deprecated`. La clase `DeprecatedTestClass` invoca estos métodos suprimiendo los warnings con `@SuppressWarnings("deprecation")`.
+Las clases hijas contienen métodos obsoletos marcados con `@Deprecated`. La clase `DeprecatedTestClass` invoca estos
+métodos suprimiendo los warnings con `@SuppressWarnings("deprecation")`.
 
 ---
 
@@ -123,7 +127,8 @@ O desde IntelliJ:
 
 ## 🌐 Despliegue
 
-Este proyecto es una aplicación de consola local y no requiere despliegue en un servidor. Está diseñado para ejecutarse en un entorno local con fines educativos.
+Este proyecto es una aplicación de consola local y no requiere despliegue en un servidor. Está diseñado para ejecutarse
+en un entorno local con fines educativos.
 
 ---
 
