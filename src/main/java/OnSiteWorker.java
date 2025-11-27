@@ -1,6 +1,6 @@
 public class OnSiteWorker extends Worker {
 
-    private static double petrol;
+    private static double petrol = 50.0;
 
     public OnSiteWorker(String name, String surname, double hourPrice) {
         super(name, surname, hourPrice);
@@ -8,7 +8,7 @@ public class OnSiteWorker extends Worker {
 
     @Override
     public double calculateSalary(int hoursWorked) {
-        return (getHourPrice() * hoursWorked) + petrol;
+        return super.calculateSalary(hoursWorked) + petrol;
     }
 
     public static double getPetrol() {

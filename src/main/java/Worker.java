@@ -8,7 +8,7 @@ public class Worker {
     public Worker(String name, String surname, double hourPrice) {
         this.name = Objects.requireNonNull(name);
         this.surname = Objects.requireNonNull(surname);
-        if (hourPrice < 0) throw new IllegalArgumentException("Age cannot be negative");
+        if (hourPrice < 0) throw new IllegalArgumentException("the price of the hour cannot be negative");
         this.hourPrice = hourPrice;
     }
 
