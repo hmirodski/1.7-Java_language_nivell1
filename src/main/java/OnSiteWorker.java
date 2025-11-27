@@ -1,7 +1,7 @@
 public class OnSiteWorker extends Worker {
 
     private static double petrol;
-    
+
     public OnSiteWorker(String name, String surname, double hourPrice) {
         super(name, surname, hourPrice);
     }
