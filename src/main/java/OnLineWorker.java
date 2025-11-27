@@ -6,9 +6,17 @@ public class OnLineWorker extends Worker {
         super(name, surname, hourPrice);
     }
 
-    public int calculateSalary(double hourPrice, int hours) {
-        return hours * hourPrice + internetFee;
+    @Override
+    public double calculateSalary(int hoursWorked) {
+        return super.calculateSalary(hoursWorked) + internetFee;
     }
+
+    @Deprecated
+    public double calculateSalaryOld(int hoursWorked) {
+        return getHourPrice() * hoursWorked;
+    }
+
+
 
 
 
